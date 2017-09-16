@@ -81,6 +81,7 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void addLast(Student student) {
+
 		if (student == null ) throw new IllegalArgumentException();
 		else {
 			ArrayList <Student>at = new ArrayList<Student>();
@@ -94,8 +95,8 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void add(Student student, int index) {
+		// Add your implementation here
 
-if(students==null) throw new IllegalArgumentException()
 
 	}
 
@@ -140,19 +141,19 @@ if(students==null) throw new IllegalArgumentException()
 		// Add your implementation here
 		if (date == null) throw new IllegalArgumentException();
 		else {
-			Student []t = new Student[students.length];
+			Student []st = new Student[students.length];
 			int count =0;
 			for(int i=0;i<students.length;i++)
 			if(students[i].getBirthDate().compareTo(date) == 0) {
-				t[count] = students[i];
+				st[count] = students[i];
 				count++;
 			}
-			Student []as = new Student[count];
+			Student []ts = new Student[count];
 
 			for(int i=0;i<count;i++) {
-				as[i] = t[i];
+				ts[i] = st[i];
 			}
-			return as;
+			return ts;
 		}
 
 	}
