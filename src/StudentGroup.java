@@ -29,14 +29,11 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public Student[] getStudents() {
-		// Add your implementation here
-		//Correct
 		return students;
 	}
 
 	@Override
 	public void setStudents(Student[] students) {
-		// Add your implementation here
 		if (students == null) {
 			throw new IllegalArgumentException();
 		}
@@ -45,14 +42,12 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public Student getStudent(int index) {
-		// Add your implementation here
 		if(index < 0 || index >= students.length) throw new IllegalArgumentException();
 		else return students[index];
 	}
 
 	@Override
-	public void setStudent(Student student, int index) {
-		// Add your implementation here
+	public void setStudent(Student student, int index)
 		if(index < 0 || index >= students.length) throw new IllegalArgumentException();
 		else {
 			students[index] = student;
@@ -61,8 +56,7 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void addFirst(Student student) {
-		// Add your implementation here
-		//Still to be Reviewed
+
 		if (student == null ) throw new IllegalArgumentException();
 		else {
 			ArrayList <Student>at = new ArrayList<Student>();
@@ -87,8 +81,6 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void addLast(Student student) {
-		// Add your implementation here
-		//Still to be Reviewed
 		if (student == null ) throw new IllegalArgumentException();
 		else {
 			ArrayList <Student>at = new ArrayList<Student>();
@@ -102,8 +94,8 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void add(Student student, int index) {
-		// Add your implementation here
 
+if(students==null) throw new IllegalArgumentException()
 
 	}
 
@@ -148,19 +140,19 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		if (date == null) throw new IllegalArgumentException();
 		else {
-			Student []st = new Student[students.length];
+			Student []t = new Student[students.length];
 			int count =0;
 			for(int i=0;i<students.length;i++)
 			if(students[i].getBirthDate().compareTo(date) == 0) {
-				st[count] = students[i];
+				t[count] = students[i];
 				count++;
 			}
-			Student []ts = new Student[count];
+			Student []as = new Student[count];
 
 			for(int i=0;i<count;i++) {
-				ts[i] = st[i];
+				as[i] = t[i];
 			}
-			return ts;
+			return as;
 		}
 
 	}
