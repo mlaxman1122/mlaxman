@@ -11,7 +11,8 @@ public class Main {
 		Student a=new Student(1,"laxman",new Date(1996,9,22),50);
 		Student b=new Student(1,"lucky",new Date(1996,10,22),50);
         Student c=new Student(1,"lakshman",new Date(1996,11,22),50);
-        system.out.println(getid());
+        p.addFirst(a);
+
 
 	}
 
